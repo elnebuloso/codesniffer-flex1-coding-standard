@@ -2,10 +2,13 @@
 
 namespace Flex1\Sniffs\Formatting;
 
+use PHP_CodeSniffer\Files\File;
+use PHP_CodeSniffer\Sniffs\Sniff;
+
 /**
  * Class UseArrayShortTagSniff
  */
-class UseArrayShortTagSniff implements \PHP_CodeSniffer\Sniffs\Sniff
+class UseArrayShortTagSniff implements Sniff
 {
     /**
      * @return array
@@ -18,11 +21,11 @@ class UseArrayShortTagSniff implements \PHP_CodeSniffer\Sniffs\Sniff
     }
 
     /**
-     * @param \PHP_CodeSniffer\Files\File $phpcsFile
+     * @param File $phpcsFile
      * @param int $stackPtr
      * @return void
      */
-    public function process(\PHP_CodeSniffer\Files\File $phpcsFile, $stackPtr)
+    public function process(File $phpcsFile, $stackPtr)
     {
         $fix = $phpcsFile->addFixableError('Array short tag [ ... ] must be used', $stackPtr, 'NoArrayShortTagUsed');
 
