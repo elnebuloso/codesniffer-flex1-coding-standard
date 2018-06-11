@@ -9,6 +9,7 @@
 
     <rule ref="PSR1"/>
     <rule ref="PSR2"/>
+    <rule ref="PSR12"/>
 
 
     <rule ref="Flex1.Php.ForceEmptyConstructorParentheses"/>
